@@ -1,0 +1,27 @@
+[Unit]
+Description=BUGATHON Level 2 Records Portal
+After=network.target postgresql.service
+Requires=postgresql.service
+
+[Service]
+Type=simple
+User=l2portal
+Group=l2portal
+SupplementaryGroups=l2portal-socket
+WorkingDirectory=/var/www/records-portal
+EnvironmentFile=/etc/default/level2-records
+EnvironmentFile=/etc/lphu-level2/portal.env
+EnvironmentFile=/etc/lphu-level2/audit-gate.env
+EnvironmentFile=/etc/lphu-level2/audit-session.env
+ExecStart=/usr/bin/python3 /var/www/records-portal/portal.py
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/run/l2portal /var/www/records-portal
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target

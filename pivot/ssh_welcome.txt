@@ -1,0 +1,5 @@
+LPHU IT Operations — authenticated staff session
+
+Your registrar-access account is active. Keep this host credential confidential.
+
+SSH pivot checkpoint: FLAG2_01{ssh_p1v0t_7c2d9a4f}

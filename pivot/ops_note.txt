@@ -1,0 +1,11 @@
+IT Operations handoff — Registrar connectivity
+
+The records portal is not published through Apache. Its service is named
+level2-records.service and exposes a protected local Unix socket:
+
+  /run/l2portal/l2portal.sock
+
+Staff should use their SSH account to forward that socket to a local browser port.
+Once connected, review /orientation before performing a student lookup.
+
+Local-enumeration checkpoint: FLAG2_02{l0c4l_0ps_m4p_83be1d}
