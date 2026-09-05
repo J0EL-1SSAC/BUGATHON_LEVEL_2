@@ -56,61 +56,47 @@ Hint 1
 Hint 2
 
 ->Developers sometimes leave behind scripts, backups, configuration files, or other operational information.
-
 ->Look for files that don't belong to the normal web application.
 
 Hint 3
-
-You are looking for information that can help you move from the web-server account to a local user.
+->You are looking for information that can help you move from the web-server account to a local user.
 
 Hint 4
-
-Once you identify another local account, investigate what access methods are available to you.
-
-Think about how administrators normally access Linux systems remotely.
+->Once you identify another local account, investigate what access methods are available to you.
+->Think about how administrators normally access Linux systems remotely.
 
 Hint 5
 
-After switching users, don't immediately start attacking the portal.
-
-Look around the new user's home directory.
-
-Hidden files may contain useful information.
+->After switching users, don't immediately start attacking the portal.
+->Look around the new user's home directory.
+->Hidden files may contain useful information.
 
 Hint 6
-
-The internal application is not necessarily exposed as a normal TCP service.
-
-Look at the information you discovered about how the internal service is connected.
+->The internal application is not necessarily exposed as a normal TCP service.
+->Look at the information you discovered about how the internal service is connected.
 
 Hint 7
-
-SSH can do more than provide an interactive shell.
-
-Investigate SSH port/socket forwarding.
+->SSH can do more than provide an interactive shell.
+->Investigate SSH port/socket forwarding.
 
 Hint 8
 
-Once you reach the portal, start with the orientation page.
-
-Read the information provided by the application carefully.
-
-The orientation process is part of the challenge.
+->Once you reach the portal, start with the orientation page.
+->Read the information provided by the application carefully.
+->The orientation process is part of the challenge.
 
 Hint 9
+->The orientation expects you to investigate more than one type of lookup.
+->Pay attention to the difference between:
 
-The orientation expects you to investigate more than one type of lookup.
+    ->A lookup that succeeds
+    ->A lookup that doesn't find a record
+    ->An unusual input
 
-Pay attention to the difference between:
-
-A lookup that succeeds
-A lookup that doesn't find a record
-An unusual input
 Hint 10
+->The orientation provides an incident reference.
 
-The orientation provides an incident reference.
-
-Keep that reference. You will need it later.
+->Keep that reference. You will need it later.
 
 Hint 11
 
