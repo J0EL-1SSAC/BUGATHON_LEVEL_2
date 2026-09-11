@@ -78,7 +78,7 @@ else
 fi
 sshd -t
 systemctl restart ssh
-tmpfiles --create /etc/tmpfiles.d/l2portal.conf
+systemd-tmpfiles --create /etc/tmpfiles.d/l2portal.conf
 systemctl daemon-reload
 systemctl enable --now level2-records.service
 
