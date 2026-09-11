@@ -66,6 +66,10 @@ chmod 0600 /etc/default/level2-records
 
 # Rebuild just this dedicated database. Existing Level 0/1 web content is untouched.
 systemctl stop level2-records.service 2>/dev/null || true
+
+sudo -u postgres psql -v ON_ERROR_STOP=1 -c "ALTER DATABASE template1 REFRESH COLLATION VERSION;"
+sudo -u postgres psql -v ON_ERROR_STOP=1 -c "ALTER DATABASE postgres REFRESH COLLATION VERSION;"
+
 sudo -u postgres psql -v ON_ERROR_STOP=1 -c "DROP DATABASE IF EXISTS ${DB_NAME};"
 sudo -u postgres psql -v ON_ERROR_STOP=1 -c "CREATE DATABASE ${DB_NAME};"
 sudo -u postgres psql -v ON_ERROR_STOP=1 -d "${DB_NAME}" -f db/schema.sql
